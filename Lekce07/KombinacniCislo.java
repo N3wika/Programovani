@@ -19,7 +19,7 @@ public class KombinacniCislo {
 		return faktorial;
 	}
 	
-	//nFaktorian / kFaktorial -> pro presnost
+	//nFaktorial / kFaktorial -> pro presnost
 	private static long pocitamNKFaktorial(int k, int n){
 		long NKFaktorial = 1;
 		for (int i = k + 1; i <= n; ++i){
