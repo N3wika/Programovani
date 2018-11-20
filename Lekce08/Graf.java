@@ -1,14 +1,24 @@
  public class Graf {
     public static void main(String[] args) {
-        tiskGrafu();
+        awh.IntList vsechnyHodnoty = awh.IntList.create();
+        java.util.Scanner sc = new java.util.Scanner(System.in);
+        
+        while (sc.hasNextInt()) {
+            vsechnyHodnoty.add(sc.nextInt());
+        }
+        tiskGrafu(vsechnyHodnoty);
     }
     
     
-    private static void tiskGrafu() {
-        java.util.Scanner sc = new java.util.Scanner(System.in);
-        while(sc.hasNextInt()) {
-            int dalsiPolozka = sc.nextInt();
+    private static void tiskGrafu(awh.IntList vsechnyHodnoty) {
+        
+        int pocetHodnot = vsechnyHodnoty.size();
+        int poradi = 0;
+        while(pocetHodnot > 0) {
+            int dalsiPolozka = vsechnyHodnoty.get(poradi);
             tiskRadku('X', dalsiPolozka);
+            --pocetHodnot;
+            ++poradi;
         }
     }
     private static void tiskRadku(char znak, int velikost){
